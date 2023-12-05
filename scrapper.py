@@ -7,3 +7,7 @@ import json
 
 driver_path = '/path/to/chromedriver'
 driver = webdriver.Chrome(executable_path=driver_path)
+
+def scrape_website(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
