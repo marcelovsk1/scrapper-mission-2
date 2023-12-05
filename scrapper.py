@@ -9,3 +9,6 @@ service = Service()
 options = webdriver.ChromeOptions()
 
 driver = webdriver.Chrome(service=service, options=options)
+
+url = 'https://books.toscrape.com/'
+driver.get(url)
