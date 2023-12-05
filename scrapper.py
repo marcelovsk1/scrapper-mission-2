@@ -1,21 +1,11 @@
-import requests
-from bs4 import BeautifulSoup
+import pandas as pd
+
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import facebook
-import time
-import json
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
 
-driver_path = '/path/to/chromedriver'
-driver = webdriver.Chrome(executable_path=driver_path)
+service = Service()
 
-def scrape_website(url):
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
+options = webdriver.ChromeOptions()
 
-
-def scrape_facebook_events(access_token, page_id):
-    graph = facebook.GraphAPI(access_token)
-    events = graph.get_connections(page_id, 'events')
-    # Extract relevant information
-    # ...
+driver = webdriver.Chrome(service=service, options=options)
