@@ -11,12 +11,15 @@ for event in events:
     event_name = event.find('h2').text
     event_date = event.find('p').text.strip()
     event_location = event.find('p', class_='Typography_root__487rx #585163 Typography_body-md__487rx event-card__clamp-line--one Typography_align-match-parent__487rx').text.strip()
+    event_image = event.find('a', class_='event-card-link')
+
+    image_url = event_image['href'] if event_image else None
 
     print(f"{event_name}")
     print(f"{event_date}")
     print(f"{event_location}")
+    print(f"Image URL: {image_url}")
     print("=" * 100)
-
 
 
 # # JSON
