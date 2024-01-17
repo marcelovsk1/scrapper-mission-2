@@ -4,3 +4,6 @@ import requests
 page = requests.get('https://ra.co/events/ca/montreal')
 
 webpage = BeautifulSoup(page.content, 'html.parser')
+
+
+print(webpage)
