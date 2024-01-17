@@ -42,7 +42,6 @@ for event in events:
     event_image = event.find('a', class_='event-card-link')
     image_url = event_image['href'] if event_image else None
 
-    # Criar um dicionário para cada evento
     event_dict = {
         'event': event_name,
         'date': event_date,
@@ -52,8 +51,6 @@ for event in events:
 
     event_list.append(event_dict)
 
-# Converter a lista de eventos para JSON
 events_json = json.dumps(event_list, indent=2, ensure_ascii=False)
 
-# Imprimir o JSON resultante
 print(events_json)
