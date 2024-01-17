@@ -13,6 +13,9 @@ for name, date in zip(event_names, event_dates):
     print(f"{name}")
     print(f"{date}")
     print("=" * 100)
+
+# JSON
+# import json
 # from bs4 import BeautifulSoup
 # import requests
 
